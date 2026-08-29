@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>울산 선한목자교회</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #faf9f7; color: #23232b; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #3a3a52; text-decoration: none; }
+  a:hover { color: #22222e; text-decoration: underline; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .card { background: #fff; border: 1px solid #e6e3de; border-radius: 5px; }
+  .h { font-family: 'Noto Serif KR', serif; font-weight: 600; margin: 0; }
+  .navlink { color: #4a4954; font-size: 15px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 11px 0; border-bottom: 1px solid #f0eeea; color: #33323c; font-size: 15px; }
+  .row span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dt { font-size: 13px; color: #a09da8; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .tab { border: 0; background: transparent; cursor: pointer; font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 600; padding: 0 0 12px; color: #a09da8; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab.on { color: #23232b; border-bottom-color: #3a3a52; }
+</style>
+</head>
+<body>
+
+<!-- ▼▼▼ 이 두 줄만 내 것으로 바꾸세요 (Supabase → Project Settings → API) ▼▼▼ -->
+<script>
+  const SUPABASE_URL = "https://skebpkafasyjsmtslvel.supabase.co/rest/v1/.supabase.co";
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrZWJwa2FmYXN5anNtdHNsdmVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc5ODEwOTgsImV4cCI6MjEwMzU1NzA5OH0.mELjbfIoeHhGxNUH4rCJkG7o_iZX9FZpsbO5VjID_gs";
+</script>
+<!-- ▲▲▲ 여기까지 ▲▲▲ -->
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(250,249,247,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #e6e3de">
+  <div class="wrap" style="padding: 14px 24px; min-height: 72px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+    <a href="/" style="display: flex; align-items: center; gap: 10px; flex-shrink: 0">
+      <img src="logo.png" alt="대한예수교장로회 통합" style="height: 38px; width: auto; display: block">
+      <span class="h" style="font-size: 18px; letter-spacing: -0.01em; color: #23232b">선한목자교회</span>
+    </a>
+    <nav style="display: flex; gap: 26px; min-width: 0; flex-wrap: wrap; row-gap: 8px; margin-left: 8px">
+      <a class="navlink" href="#">교회소개</a>
+      <a class="navlink" href="#">예배와 말씀</a>
+      <a class="navlink" href="#">교육</a>
+      <a class="navlink" href="#">교회 소식</a>
+      <a class="navlink" href="#">섬김과 선교</a>
+      <a class="navlink" href="#">오시는 길</a>
+    </nav>
+    <div style="margin-left: auto; flex-shrink: 0">
+      <a href="#" style="font-size: 14px; padding: 9px 18px; border: 1px solid #3a3a52; border-radius: 3px; display: inline-block">온라인 예배</a>
+    </div>
+  </div>
+</header>
+
+<section class="wrap" style="padding: 64px 24px 44px; text-align: center">
+  <p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.16em; color: #a09da8">대한예수교장로회 · 울산</p>
+  <h1 class="h" style="margin: 0 0 14px; font-size: 46px; line-height: 1.35; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance">여호와는 나의 목자시니<br>내게 부족함이 없으리로다</h1>
+  <p style="margin: 0; font-family: 'Noto Serif KR', serif; font-style: italic; font-size: 14px; letter-spacing: 0.04em; color: #a09da8">Psalm 23:1</p>
+</section>
+
+<section class="wrap" style="padding: 0 24px 20px">
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+
+    <div class="card" style="flex: 2 1 460px; overflow: hidden">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 22px 24px 16px">
+        <h2 class="h" style="font-size: 20px">이번 주 주일 설교</h2>
+        <a href="#" style="font-size: 13px; color: #78767f">설교 전체보기 →</a>
+      </div>
+      <div id="latest-video" style="aspect-ratio: 16 / 9; background: #edeae5; border-top: 1px solid #e6e3de; border-bottom: 1px solid #e6e3de"></div>
+      <div style="padding: 20px 24px 24px">
+        <p id="latest-meta" style="margin: 0 0 8px; font-size: 13px; color: #a09da8"></p>
+        <h3 id="latest-title" class="h" style="margin: 0 0 10px; font-size: 24px; font-weight: 500; letter-spacing: -0.01em"></h3>
+        <p id="latest-summary" style="margin: 0; font-size: 15px; line-height: 1.75; color: #5b5966; text-wrap: pretty"></p>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 280px; background: #3a3a52; color: #f2f1ee; border-radius: 5px; padding: 26px 24px; display: flex; flex-direction: column; gap: 20px">
+      <h2 class="h" style="font-size: 20px; color: #fff">예배 안내</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,0.14)"><span style="font-size: 15px">주일 1부 예배</span><span style="font-size: 14px; color: #b9b6c8">오전 9:00</span></div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,0.14)"><span style="font-size: 15px">주일 2부 예배</span><span style="font-size: 14px; color: #b9b6c8">오전 11:00</span></div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,0.14)"><span style="font-size: 15px">수요 기도회</span><span style="font-size: 14px; color: #b9b6c8">저녁 7:30</span></div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,0.14)"><span style="font-size: 15px">금요 철야</span><span style="font-size: 14px; color: #b9b6c8">저녁 9:00</span></div>
+        <div style="display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,0.14)"><span style="font-size: 15px">새벽 기도</span><span style="font-size: 14px; color: #b9b6c8">매일 5:30</span></div>
+      </div>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px">
+        <a href="#" style="text-align: center; background: #faf9f7; color: #3a3a52; font-size: 14px; padding: 12px; border-radius: 3px">온라인 예배 참여</a>
+        <a href="#" style="text-align: center; border: 1px solid rgba(255,255,255,0.3); color: #eceaf2; font-size: 14px; padding: 12px; border-radius: 3px">새가족 등록</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap" style="padding: 20px 24px">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start">
+
+    <div class="card" style="padding: 22px 24px 20px">
+      <div style="display: flex; gap: 18px; border-bottom: 1px solid #e6e3de; margin-bottom: 16px">
+        <button class="tab on" id="tab-0" onclick="showTab(0)">공지사항</button>
+        <button class="tab" id="tab-1" onclick="showTab(1)">교회 소식</button>
+      </div>
+      <div id="notice-list" style="display: flex; flex-direction: column"></div>
+    </div>
+
+    <div class="card" style="padding: 22px 24px 20px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px">
+        <h2 class="h" style="font-size: 17px">주보 · 소식지</h2>
+        <a href="#" style="font-size: 13px; color: #78767f">지난 주보 →</a>
+      </div>
+      <div id="bulletin-list" style="display: flex; flex-direction: column"></div>
+    </div>
+
+    <div class="card" style="padding: 22px 24px 20px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px">
+        <h2 class="h" style="font-size: 17px">교회 일정</h2>
+        <span id="cal-label" style="font-size: 14px; color: #78767f"></span>
+      </div>
+      <div id="calendar" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; margin-bottom: 14px"></div>
+      <div id="event-list" style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #f0eeea; padding-top: 14px"></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap" style="padding: 20px 24px">
+  <div class="card" style="padding: 22px 24px 24px">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px">
+      <h2 class="h" style="font-size: 17px">지난 설교 영상</h2>
+      <a href="#" style="font-size: 13px; color: #78767f">유튜브 채널 →</a>
+    </div>
+    <div id="sermon-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px"></div>
+  </div>
+</section>
+
+<footer style="margin-top: 44px; border-top: 1px solid #e6e3de; background: #f4f2ee">
+  <div class="wrap" style="padding: 36px 24px 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+    <div>
+      <p class="h" style="margin: 0 0 10px; font-size: 16px">울산 선한목자교회</p>
+      <p style="margin: 0; font-size: 13.5px; line-height: 1.9; color: #78767f">대한예수교장로회<br>울산광역시 남구 삼산로 000<br>052-000-0000 · goodshepherd@church.kr</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px">
+      <a href="#" style="color: #6b6975">교회 연혁</a>
+      <a href="#" style="color: #6b6975">섬기는 사람들</a>
+      <a href="#" style="color: #6b6975">주차 안내</a>
+      <a href="#" style="color: #6b6975">온라인 헌금</a>
+    </div>
+    <div style="font-size: 12.5px; color: #a09da8; line-height: 1.8">
+      <p style="margin: 0">© 2026 선한목자교회</p>
+      <p style="margin: 6px 0 0">개인정보처리방침 · 이용약관</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const md = (d) => d ? new Date(d).toLocaleDateString("ko-KR", { month: "2-digit", day: "2-digit" }).replace(/\.\s?$/, "").replace(/\.\s/, ".") : "";
+
+let noticeData = { 공지: [], 소식: [] };
+const empty = (msg) => `<p style="margin:8px 0;font-size:14px;color:#a09da8">${msg}</p>`;
+
+function showTab(i) {
+  document.getElementById("tab-0").classList.toggle("on", i === 0);
+  document.getElementById("tab-1").classList.toggle("on", i === 1);
+  const rows = i === 0 ? noticeData["공지"] : noticeData["소식"];
+  document.getElementById("notice-list").innerHTML = rows.length
+    ? rows.map(n => `<a class="row" href="#"><span>${esc(n.title)}</span><span class="dt">${md(n.published_at)}</span></a>`).join("")
+    : empty("등록된 글이 없습니다.");
+}
+
+async function loadNotices() {
+  const { data } = await db.from("notices").select("*").order("published_at", { ascending: false }).limit(20);
+  (data || []).forEach(n => (noticeData[n.category === "소식" ? "소식" : "공지"] ||= []).push(n));
+  showTab(0);
+}
+
+async function loadSermons() {
+  const { data } = await db.from("sermons").select("*").order("preached_at", { ascending: false }).limit(4);
+  if (!data || !data.length) {
+    document.getElementById("latest-video").innerHTML = "";
+    document.getElementById("latest-meta").textContent = "";
+    document.getElementById("latest-title").textContent = "곧 업데이트됩니다";
+    document.getElementById("latest-summary").textContent = "설교 영상이 등록되면 이곳에 표시됩니다.";
+    document.getElementById("sermon-list").innerHTML = empty("등록된 영상이 없습니다.");
+    return;
+  }
+  const [top, ...rest] = data;
+  document.getElementById("latest-video").innerHTML = top.youtube_id
+    ? `<iframe src="https://www.youtube.com/embed/${esc(top.youtube_id)}" style="width:100%;height:100%;border:0" allowfullscreen title="${esc(top.title)}"></iframe>`
+    : "";
+  document.getElementById("latest-meta").textContent = [top.preached_at, top.preacher].filter(Boolean).join(" · ");
+  document.getElementById("latest-title").textContent = top.title || "";
+  document.getElementById("latest-summary").textContent = [top.scripture, top.summary].filter(Boolean).join(". ");
+  document.getElementById("sermon-list").innerHTML = rest.length ? rest.map(v => `
+    <a href="https://youtu.be/${esc(v.youtube_id)}" target="_blank" rel="noopener" style="color:inherit">
+      <img src="https://img.youtube.com/vi/${esc(v.youtube_id)}/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:3px;border:1px solid #e6e3de;margin-bottom:10px;display:block">
+      <p style="margin:0 0 4px;font-size:14.5px;line-height:1.5;color:#33323c">${esc(v.title)}</p>
+      <p style="margin:0;font-size:12px;color:#a09da8">${esc(md(v.preached_at))} · ${esc(v.preacher || "")}</p>
+    </a>`).join("") : empty("지난 영상이 아직 없습니다.");
+}
+
+async function loadBulletins() {
+  const { data } = await db.from("bulletins").select("*").order("issued_at", { ascending: false }).limit(3);
+  const rows = data || [];
+  document.getElementById("bulletin-list").innerHTML = rows.length ? rows.map(b => `
+    <a href="${esc(b.file_url || "#")}" target="_blank" rel="noopener" style="padding:11px 0;border-bottom:1px solid #f0eeea;color:inherit;display:block">
+      <div style="display:flex;justify-content:space-between;gap:10px;margin-bottom:3px">
+        <span style="font-size:13px;color:#3a3a52">${esc(b.title)}</span>
+        <span style="font-size:12px;color:#a09da8">${md(b.issued_at)}</span>
+      </div>
+      <p style="margin:0;font-size:14px;color:#45444e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(b.description || "")}</p>
+    </a>`).join("") : empty("등록된 주보가 없습니다.");
+}
+
+async function loadEvents() {
+  const today = new Date();
+  const y = today.getFullYear(), m = today.getMonth();
+  document.getElementById("cal-label").textContent = `${y}. ${m + 1}`;
+
+  const first = new Date(y, m, 1), last = new Date(y, m + 1, 0);
+  const { data } = await db.from("events").select("*")
+    .gte("event_date", first.toISOString().slice(0, 10))
+    .order("event_date", { ascending: true });
+  const rows = data || [];
+  const dots = new Set(rows.map(e => new Date(e.event_date)).filter(d => d.getMonth() === m).map(d => d.getDate()));
+
+  let cells = ["일", "월", "화", "수", "목", "금", "토"]
+    .map(w => `<div style="font-size:11px;color:#a09da8;padding-bottom:6px">${w}</div>`).join("");
+  const lead = first.getDay();
+  for (let i = 0; i < 42; i++) {
+    const n = i - lead + 1;
+    const dim = n < 1 || n > last.getDate();
+    const label = dim ? (n < 1 ? new Date(y, m, 0).getDate() + n : n - last.getDate()) : n;
+    const isToday = !dim && n === today.getDate();
+    const inner = isToday
+      ? `<span style="font-size:12px;width:26px;height:26px;border-radius:50%;background:#3a3a52;color:#faf9f7;display:grid;place-items:center">${label}</span>`
+      : `<span style="font-size:12px;color:${dim ? "#d8d4cd" : "#56555f"}">${label}</span>`;
+    const dot = !dim && dots.has(n) ? `<span style="position:absolute;bottom:3px;width:4px;height:4px;border-radius:50%;background:#8c7a4f"></span>` : "";
+    cells += `<div style="aspect-ratio:1;display:grid;place-items:center;position:relative">${inner}${dot}</div>`;
+  }
+  document.getElementById("calendar").innerHTML = cells;
+
+  document.getElementById("event-list").innerHTML = rows.length ? rows.slice(0, 3).map(e => `
+    <div style="display:flex;gap:12px;align-items:baseline">
+      <span style="font-size:12px;color:#8c7a4f;width:44px;flex-shrink:0">${md(e.event_date)}</span>
+      <span style="font-size:14px;color:#45444e">${esc(e.title)}</span>
+    </div>`).join("") : empty("예정된 일정이 없습니다.");
+}
+
+loadNotices(); loadSermons(); loadBulletins(); loadEvents();
+</script>
+</body>
+</html>
